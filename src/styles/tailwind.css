@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply flex h-screen w-screen items-center justify-center bg-slate-200;
+  }
+
+  .game-container {
+    @apply flex flex-col gap-8 rounded-md bg-white px-16 py-6 shadow-md;
+    width: 30rem;
+  }
+
+  .game-play {
+    @apply mt-7 flex justify-between;
+  }
+
+  .play-img {
+    @apply h-36 w-24;
+  }
+
+  .user-hand {
+    @apply play-img rotate-90;
+  }
+
+  .system-hand {
+    @apply play-img;
+    transform: rotate(-90deg) rotateY(180deg);
+  }
+
+  .message {
+    @apply text-center text-4xl text-purple-700;
+  }
+
+  .user-selection-img-container {
+    @apply flex justify-evenly;
+  }
+
+  .img-container {
+    @apply cursor-pointer;
+  }
+
+  .selection-img {
+    @apply h-20 w-16 opacity-50;
+  }
+
+  .img-title {
+    @apply mt-3 text-center text-xl text-purple-700/50;
+  }
+
+  .disable-interaction {
+    pointer-events: none;
+  }
+}
